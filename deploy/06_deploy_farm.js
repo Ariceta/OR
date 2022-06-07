@@ -32,11 +32,12 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     await sleep(10000);
     const galacticFarmingImplementation = await hre.deployments.get('GalacticFarming_Implementation');
     const galacticFarmingDeployed = await ethers.getContractAt('GalacticFarming', galacticFarmingImplementation.address);
-    // Verification block
+    /*// Verification block
     await run("verify:verify", {
         address: galacticFarmingDeployed.address,
         contract: "contracts/GalacticFarming.sol:GalacticFarming"
     });
+    */
 };
 
 module.exports.tags = ['GalacticFarming'];
